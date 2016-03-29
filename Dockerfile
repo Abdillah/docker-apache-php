@@ -29,6 +29,7 @@ RUN chown -R www-data:www-data /var/www/
 RUN sed -i -e "s/upload_max_filesize\s*=\s*2M/upload_max_filesize = 100M/g" /etc/php5/apache2/php.ini
 RUN sed -i -e "s/post_max_size\s*=\s*8M/post_max_size = 100M/g" /etc/php5/apache2/php.ini
 RUN sed -i -e "s/short_open_tag\s*=\s*Off/short_open_tag = On/g" /etc/php5/apache2/php.ini
+RUN sed -i -e 's/;opcache.enable/opcache.enable/' /etc/php5/apache2/php.ini
 
 # fix for php5-mcrypt
 RUN /usr/sbin/php5enmod mcrypt
