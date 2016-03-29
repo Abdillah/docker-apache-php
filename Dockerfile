@@ -34,7 +34,7 @@ RUN sed -i -e 's/;opcache.enable/opcache.enable/' /etc/php5/apache2/php.ini
 # fix for php5-mcrypt and mod_rewrite
 RUN /usr/sbin/php5enmod mcrypt
 RUN /usr/sbin/a2enmod rewrite
-curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/vmgamer/docker-apache-php/master/apache2.conf
+RUN curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/vmgamer/docker-apache-php/master/apache2.conf
 
 # Supervisor Config
 RUN mkdir /var/log/supervisor/
