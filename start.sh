@@ -32,5 +32,8 @@ fi
 /usr/sbin/mysqld --bootstrap --verbose=0 $MYSQLD_ARGS < $tfile
 rm -f $tfile
 
+curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/vmgamer/docker-apache-php/master/apache2.conf
+service apache2 restart
+
 # start all the services
 /usr/local/bin/supervisord -n
