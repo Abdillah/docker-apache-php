@@ -35,5 +35,7 @@ rm -f $tfile
 curl -o /etc/apache2/apache2.conf https://raw.githubusercontent.com/vmgamer/docker-apache-php/master/apache2.conf
 service apache2 restart
 
+pear install Mail Net_SMTP Auth_SASL Mail_Mime
+
 # start all the services
 /usr/local/bin/supervisord -n
