@@ -52,4 +52,7 @@ RUN chmod 755 /start.sh
 EXPOSE 3306
 EXPOSE 80
 
+# volume to preserve files
+VOLUME ["/var/lib/mysql"]
+
 CMD ["/bin/bash", "/start.sh"]
