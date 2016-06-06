@@ -10,7 +10,7 @@ sudo docker ps
 
 cd ..
 rm -rf docker-apache-php
-``` bash
+```
 
 ### To Run
 
