@@ -1,10 +1,16 @@
 # Docker Apache PHP
 
-## To Build
-
+## To Build manual way
 ``` bash
-$ docker build -t eugeneware/docker-apache-php .
-```
+git clone https://github.com/vmgamer/docker-apache-php.git
+cd docker-apache-php
+sudo docker build -t="eugeneware/docker-apache-php" .
+CONTAINER=$(docker run -d -p 8082:80 -p 33060:3306 -v ~/domainesia.com/www:/var/www/html --name domainesia.com eugeneware/docker-apache-php)
+sudo docker ps
+
+cd ..
+rm -rf docker-apache-php
+``` bash
 
 ### To Run
 
