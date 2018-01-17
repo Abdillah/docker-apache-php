@@ -20,7 +20,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y --force-yes install python-setupto
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y --force-yes install mysql-server mysql-client apache2 libapache2-mod-php5.6 php5.6-mysql php-apc
 
 # Wordpress Requirements
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y  --force-yes install php5.6-curl php5.6-gd php5.6-intl php-pear php5.6-imagick php5.6-imap php5-mcrypt php5.6-memcache php5.6-ps php5.6-pspell php5.6-recode php5.6-sqlite php5-tidy php5.6-xmlrpc php5.6-xsl php-pear
+RUN DEBIAN_FRONTEND=noninteractive apt-get -y  --force-yes install php5.6-curl php5.6-gd php5.6-intl php5.6-mbstring php-pear php5.6-imagick php5.6-imap php5-mcrypt php5.6-memcache php5.6-ps php5.6-pspell php5.6-recode php5.6-sqlite php5-tidy php5.6-xmlrpc php5.6-xsl php-pear
 
 # Mail function
 RUN DEBIAN_FRONTEND=noninteractive pear install Mail Net_SMTP Auth_SASL Mail_Mime
