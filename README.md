@@ -2,10 +2,10 @@
 
 ## To Build manual way
 ``` bash
-git clone https://github.com/vmgamer/docker-apache-php.git
+git clone https://github.com/Abdillah/docker-apache-php.git
 cd docker-apache-php
 sudo docker build -t="eugeneware/docker-apache-php" .
-CONTAINER=$(docker run -d -p 8082:80 -p 33060:3306 -v ~/domainesia.com/www:/var/www/html --name domain.com eugeneware/docker-apache-php)
+CONTAINER=$(docker run -d -p 8080:80 -p 33060:3306 -v ~/localsite.com/www:/var/www/html --name localsite.com eugeneware/docker-apache-php)
 sudo docker ps
 
 cd ..
@@ -19,7 +19,7 @@ your web content to the apache web server.
 
 ``` bash
 # run docker apache php
-$ CONTAINER=$(docker run -d -p 8082:80 -p 33060:3306 -v /your/path/to/serve:/var/www/html eugeneware/docker-apache-php)
+$ CONTAINER=$(docker run -d -p 8080:80 -p 33060:3306 -v /your/path/to/serve:/var/www/html eugeneware/docker-apache-php)
 
 # get the http port
 # $ docker port $CONTAINER 80
